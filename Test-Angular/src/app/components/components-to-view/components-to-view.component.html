@@ -1,0 +1,42 @@
+<h3>Component To View</h3>
+ <h3> {{name}} </h3>
+  <h3> {{age}} </h3>
+   <h3> {{sex}} </h3>
+   <h3> {{sex ? 'Nam':'Nu'}} </h3>
+   <h3>{{ showInfo() }}</h3>
+   <img src="{{ imgLink }}">
+   <a href="{{ linkFB }}"> Link FB</a>
+      <img [src]="imgLink">
+   <a [href]="linkFB"> Link FB</a>
+   <input type="text" name="" id="input" class="form-control" [value]="name" pattern="" title="">
+   <button type="button" class="btn btn-default" [disabled] = "sex">SCD</button>
+   <table border="1" [attr.width]="age">
+       <tr>
+           <td>ID</td>
+           <td>Họ Tên</td>
+           <td>SĐT</td>
+       </tr>
+       <tr>
+           <td>1</td>
+           <td>ABC</td>
+           <td>123123123</td>
+       </tr>
+   </table>
+   <table [class.table-bordered] = "sex">
+       <tr>
+           <td>ID</td>
+           <td>Họ Tên</td>
+           <td>SĐT</td>
+       </tr>
+       <tr>
+           <td>1</td>
+           <td>ABC</td>
+           <td>123123123</td>
+       </tr>
+   </table>
+   <span class="label" [class.label-danger] = "checkLabel === true" [class.label-success] = "checkLabel === false">Label</span>
+
+<!--     <h3> {{user.name2}} </h3>
+  <h3> {{user.age2}} </h3>
+   <h3> {{user.sex2}} </h3>
+   <h3> {{user.sex2 ? 'Nam':'Nu'}} </h3> -->

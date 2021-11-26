@@ -1,0 +1,6 @@
+<h3 [class.pd-10]="isPadding" [class.cl-red]="isPadding">ngClass Directive</h3>
+<h3 [ngClass]="{'border-red' : isPadding}">Test ngClass1</h3>
+<button (click)="onClick()">On/Off</button>
+<hr>
+<h3 [ngClass]="setClasses()" [ngClass]="{'cl-red' : isPadding}">Test ngClass1</h3>
+<h3 [ngClass]="{'border-red' : isPadding, 'pd-10':isPadding, 'cl-red':isPadding}"> Nếu dùng 2 ngClass thì chỉ lấy 1 mình cái được set sau cùng</h3>

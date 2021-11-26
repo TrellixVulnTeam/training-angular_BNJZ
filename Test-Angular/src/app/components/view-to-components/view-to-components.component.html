@@ -1,0 +1,17 @@
+<p>{{title}}</p>
+<button type="button" class="btn btn-primary" (click)="onClick()">button</button>
+
+<h1>{{count}}</h1>
+<button type="button" class="btn btn-primary" (click)="onMinus()">Down</button>
+<button type="button" class="btn btn-primary" (click)="onPlus()">Up</button>
+<hr>
+<h1>{{testText}}</h1>
+	<div class="form-group">
+		<label for="">Test Text</label>
+		<input type="text" class="form-control" id="" placeholder="Input field" (keyup)="onKeyUp($event)">
+	</div>
+	<div class="form-group">
+		<label for="">Test Text</label>
+		<input type="text" class="form-control" id="" placeholder="Input field" (keyup.enter)="onKeyUp($event)">
+	</div>
+	<h1>Result Entered: {{testText}}</h1>

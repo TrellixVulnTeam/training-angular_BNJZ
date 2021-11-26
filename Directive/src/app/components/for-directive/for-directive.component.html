@@ -1,0 +1,26 @@
+<ul class="list-group">
+	<li class="list-group-item" *ngFor="let item of names"> {{item}}</li>
+</ul>
+
+<ng-container *ngIf="mate.length >0; else noMate">
+	<table class="table table-bordered table-hover">
+	<thead>
+		<tr>
+			<th>STT</th>
+			<th>Name</th>
+			<th>Age</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let item of mate; let f = even ;trackBy :myTrackByFunction" [style.background-color]="f === true ? 'cyan' : '' ">
+			<td>{{item.id}}</td>
+			<td>{{item.name}}</td>
+			<td>{{item.age}} years old</td>
+		</tr>
+	</tbody>
+</table>
+</ng-container>
+<ng-template #noMate>
+	<h1>Éo có ai</h1>
+</ng-template>
+<button type="button" class="btn btn-warning" (click)="onClick()">Get Data</button>

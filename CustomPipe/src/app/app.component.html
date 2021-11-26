@@ -1,0 +1,54 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>Pipe Name</th>
+            <th>Input</th>
+            <th>Output</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Format Data</td>
+            <td>{{content}}</td>
+            <td>{{content | FormatData : 20 : 100}}</td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input type="text" name="" id="" [(ngModel)]="lookID">
+            </td>
+            <td>
+              <input type="text" name="" id="" [(ngModel)]="lookName">
+            </td>
+            <td>
+              <input type="text" name="" id="" [(ngModel)]="lookPrice">
+            </td>
+          </tr>
+          <tr *ngFor="let item of product | filter : lookID: lookName : lookPrice"  >
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </div>
+  </div>
+</div>

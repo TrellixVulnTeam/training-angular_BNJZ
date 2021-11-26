@@ -1,0 +1,37 @@
+<table class="table table-bordered table-hover">
+	<thead>
+		<tr>
+			<th>Tên</th>
+			<th>Tuổi</th>
+		</tr>
+	</thead>
+	<tbody *ngFor="let item of actor" [ngSwitch]="item.age" >
+		<tr *ngSwitchCase = 18>
+			<td>{{item.name}}</td>
+			<td>{{item.age}}</td>
+		</tr>
+		<tr *ngSwitchCase = 19>
+			<td>{{item.name}}</td>
+			<td>{{item.age}}</td>
+		</tr>
+		<tr *ngSwitchCase = 20>
+			<td>{{item.name}}</td>
+			<td>{{item.age}}</td>
+		</tr>
+	</tbody>
+</table>
+
+<ul class="list-group">
+	<li class="list-group-item" *ngFor="let item of actor" [ngSwitch]="item.age">
+		<span *ngSwitchCase = 18 class="text-danger">
+			{{item.name}} - {{item.age}}
+		</span>
+		<span *ngSwitchCase = 19 class="text-primary">
+			{{item.name}} - {{item.age}}
+		</span>
+		<span *ngSwitchDefault>
+			{{item.name}} - {{item.age}}
+		</span>
+	</li>
+	
+</ul>

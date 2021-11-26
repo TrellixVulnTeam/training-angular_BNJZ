@@ -1,0 +1,27 @@
+<h1>{{title}}</h1>
+<h2>Ngoài Form dùng bth</h2>
+<div class="form-group">
+  <label for="">Nhập gì thì nhập</label>
+  <input type="text" class="form-control" id="" placeholder="Input field" [(ngModel)]="testInput">
+</div>
+<h3>{{testInput}}</h3>
+<hr>
+<select class="form-control" [(ngModel)]="sex">
+  <option value="0">Nam</option>
+  <option value="1">Nữ</option>
+</select>
+<h3>{{sex === 0 ? "Nam" : "Nữ"}}</h3>
+<form>
+	<h1>Ở trong form thêm ngModelOptions</h1>
+  <div class="form-group">
+    <label for="">Nhập gì thì nhập</label>
+    <input type="text" class="form-control" id="" placeholder="Input field" [(ngModel)]="testInput" [ngModelOptions]="{standalone: true}">
+  </div>
+  <h3>{{testInput}}</h3>
+  <hr>
+  <select class="form-control" [(ngModel)]="sex" [ngModelOptions]="{standalone: true}">
+    <option value="0">Nam</option>
+    <option value="1">Nữ</option>
+  </select>
+  <h3>{{sex === 0 ? "Nam" : "Nữ"}}</h3>
+</form>

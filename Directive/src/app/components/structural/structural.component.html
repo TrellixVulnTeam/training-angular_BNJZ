@@ -1,0 +1,30 @@
+<h1 *ngIf="isShow">{{name}}</h1>
+
+<button type="button" class="btn btn-default" (click)="onClick()">button</button>
+
+<div class="radio">
+	<label>
+		<input type="radio" name="checkRadio" (click)="onTicked(true)"> Hợp Lý
+		<input type="radio" name="checkRadio" (click)="onTicked(false)"> Bất Hợp Lý
+	</label>
+</div>
+<h3 *ngIf="valueRadio">Hợp lệ</h3>
+<h3 *ngIf="!valueRadio">Không hợp lệ</h3>
+<hr>
+<h3 *ngIf="valueRadio; else elseBlock">Hợp lệ</h3>
+<ng-template #elseBlock>
+<h3 *ngIf="!valueRadio">Không hợp lệ</h3>
+</ng-template>
+<hr>
+<hr>
+<hr>
+	<div class="form-group">
+		<label for="">Tuổi</label>
+		<input type="text" class="form-control" id="" placeholder="Input field" [(ngModel)]="age">
+	</div>
+<ng-container *ngIf="age>18;else elseBlockAge">
+	<h3>Hợp lệ</h3>
+</ng-container>
+<ng-template #elseBlockAge>
+<h3>Không hợp lệ</h3>
+</ng-template>

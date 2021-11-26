@@ -1,0 +1,4 @@
+<p>style-directive works!</p>
+<h3 [ngStyle]="{'border': isChecked ? 'solid 2px cyan': '', 'padding.px': isChecked?'10':'','color':isChecked?'Yellow':''}">Test ngStyle</h3>
+<h3 [ngStyle]="onNgStyle()">Set ngStyle bằng function</h3>
+<button (click)="onClick()">On/Off</button>

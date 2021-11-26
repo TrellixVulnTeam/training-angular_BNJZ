@@ -1,0 +1,18 @@
+{{userName}}
+{{phoneNo}}
+<table class="table table-bordered table-hover">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Phone</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let item of myUsers">
+			<td>{{item.id}}</td>
+			<td>{{item.name}}</td>
+			<td>{{item.phone}}</td>
+		</tr>
+	</tbody>
+</table>
