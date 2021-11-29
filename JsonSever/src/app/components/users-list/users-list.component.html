@@ -1,0 +1,33 @@
+
+<div class="panel panel-primary">
+      <div class="panel-heading">
+            <h3 class="panel-title">Users Management</h3>
+      </div>
+      <div class="panel-body">
+            
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Sexuality</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of allUsers">
+                        <td>{{item.id}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.sexuality?'Nam':'Nữ'}}</td>
+                        <td>
+                            <button type="button" class="btn btn-warning" [style.margin-right.px]="10" [routerLink]="['/users',item.id]">Edit</button>
+                            <button type="button" class="btn btn-danger" (click)="onDelete(item.id)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <button type="button" class="btn btn-primary"  [routerLink]="['/users/add']">New User</button>
+            
+      </div>
+</div>

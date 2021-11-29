@@ -1,0 +1,29 @@
+
+<div class="panel panel-primary">
+      <div class="panel-heading">
+            <h3 class="panel-title">Template Driven Form</h3>
+      </div>
+      <div class="panel-body">
+           
+           <form #formAccount = "ngForm" (ngSubmit)="onSubmitForm(formAccount)" autocomplete="false">
+               <div class="form-group">
+                   <label for="">UserName</label>
+                   <input type="text" class="form-control" minlength="4" pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$' name="txtUserName" [(ngModel)]="account.username" #username="ngModel" >
+                
+                <ng-container *ngIf="username?.errors?.['minlength']"><div class="panel panel-danger" > username sai cmnr    
+                </div>
+            </ng-container>
+            <ng-container *ngIf="username?.errors?.['pattern']"><div class="panel panel-danger" > username sai cmnr test pattern email  
+            </div>
+        </ng-container>
+                </div>
+               <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control" name="txtPassword" [(ngModel)]="account.password" #password="ngModel">
+            </div>
+               <button type="submit" class="btn btn-primary">Save</button>
+               <button type="button" class="btn btn-primary" (click)="onResetForm(formAccount)" [style.margin-left.px]="10">Reset Form</button>
+           </form>
+           
+      </div>
+</div>

@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Thien1",
+      "sexuality": true
+    },
+    {
+      "id": 2,
+      "name": "Thien256",
+      "sexuality": "true"
+    },
+    {
+      "name": "Thien Dep Trai 69",
+      "sexuality": "false",
+      "id": 3
+    },
+    {
+      "name": "Thien 4",
+      "sexuality": "false",
+      "id": 6
+    },
+    {
+      "name": "Thien 4",
+      "sexuality": "false",
+      "id": 7
+    },
+    {
+      "name": "Thien 4 ",
+      "sexuality": "false",
+      "id": 8
+    }
+  ]
+}

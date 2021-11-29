@@ -1,0 +1,60 @@
+
+<div class="container" [style.margin-top.px]="30">
+  
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+       
+       <table class="table table-bordered table-hover">
+         <thead>
+           <tr>
+             <th>ID</th>
+             <th>Title</th>
+             <th>Status</th>
+             <th>Action</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr *ngFor="let item of todos">
+             <td>{{item.id}}</td>
+             <td>{{item.title}}</td>
+             <td>{{item.status ? 'Actived':'Deactive'}}</td>
+             <td>
+               <button type="button" class="btn btn-primary" (click)="onEdit(item)">Edit</button>
+               <button type="button" class="btn btn-danger" (click)="onDelete(item.id)">Delete</button>
+             </td>
+           </tr>
+         </tbody>
+       </table>
+       <hr>
+       
+       <form>
+         <legend>Add courses</legend>
+       
+         <div class="form-group">
+           <label for="">Title</label>
+           <input type="text" class="form-control"  placeholder="Input Title" [(ngModel)]="title" [ngModelOptions]="{standalone: true}">
+         </div>       
+         <select class="form-control" [(ngModel)]="status" [ngModelOptions]="{standalone: true}">
+           <option value="true">Active</option>
+           <option value="false">Deactive</option>
+         </select>
+         <button type="submit" class="btn btn-primary" [style.margin-top.px]="20" (click)="onSave()">Save</button>
+       </form>
+       <hr>
+       <form *ngIf="todo">
+        <legend>Edit courses</legend>
+        <div class="form-group">
+          <label for="">Title</label>
+          <input type="text" class="form-control"  placeholder="Input Title" [(ngModel)]="todo.title" [ngModelOptions]="{standalone: true}">
+        </div>       
+        <select class="form-control" [(ngModel)]="todo.status" [ngModelOptions]="{standalone: true}">
+          <option value="true">Active</option>
+          <option value="false">Deactive</option>
+        </select>
+        <button type="submit" class="btn btn-primary" [style.margin-top.px]="20" (click)="onUpdate()">Update</button>
+      </form>
+    </div>
+  </div>
+  
+  
+</div>

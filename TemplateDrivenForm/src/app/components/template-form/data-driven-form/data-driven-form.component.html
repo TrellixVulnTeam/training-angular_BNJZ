@@ -1,0 +1,40 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Data Driven Form</h3>
+  </div>
+  <div class="panel-body">
+    <form [formGroup]="formAccount" (ngSubmit)="onSubmitForm()">
+      <div class="form-group">
+        <label for="">UserName</label>
+        <input
+          type="text"
+          class="form-control"
+          name="txtUserName"
+          formControlName="username"
+        />
+        <app-custom-validate [control]="formAccount.controls?.['username']"></app-custom-validate>
+      </div>
+      <div class="form-group">
+        <label for="">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          name="txtPassword"
+          formControlName="password"
+        />
+        <span class="label label-danger" *ngIf="formAccount.controls?.['password']?.errors?.['minlength']">Thieu ky tu</span>
+      </div>
+      <button type="submit"  class="btn btn-primary">Save</button>
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="onResetForm()"
+        [style.margin-left.px]="10"
+      >
+        Reset Form
+      </button>
+    </form>
+  </div>
+</div>
+<!-- [disabled]="formAccount.invalid" -->
+
