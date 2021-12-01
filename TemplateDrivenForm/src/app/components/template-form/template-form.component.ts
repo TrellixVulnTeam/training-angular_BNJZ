@@ -22,4 +22,5 @@ export class TemplateFormComponent implements OnInit {
   onResetForm(formAccount:NgForm){
     formAccount.reset();
   }
+
 }

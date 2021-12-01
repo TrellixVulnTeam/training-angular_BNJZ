@@ -1,0 +1,27 @@
+<div class="panel panel-success">
+    <div class="panel-heading">
+      <h3 class="panel-title">Update Profile</h3>
+    </div>
+    <div class="panel-body">
+      <form [formGroup]="formUserUpdate" (ngSubmit)="onUpdate()">
+        <div class="form-group">
+          <label for="">Username</label>
+          <input type="text" class="form-control" name = "inputUserName" formControlName="username" readonly="readonly"/>
+        </div>
+        <div class="form-group">
+          <label for="">Password</label>
+          <input type="text" class="form-control" name = "inputPassword" formControlName="password" />
+        </div>
+        <div class="form-group">
+          <label for="">Name</label>
+          <input type="text" class="form-control" name = "inputName" formControlName="name" />
+        </div>
+        <div class="form-group">
+          <label for="">Email</label>
+          <input type="text" class="form-control" name = "inputEmail" formControlName="email"/>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+  

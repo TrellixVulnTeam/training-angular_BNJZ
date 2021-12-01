@@ -1,0 +1,21 @@
+<form [formGroup]="formAccount" (ngSubmit)="onSubmitForm()">
+  <div class="form-group">
+    <label for="">Tên đăng nhập</label>
+    <input type="text" name = "inputUserName" formControlName="username" />
+  </div>
+  <div class="form-group">
+    <label for="">Mật Khẩu</label>
+    <input type="text" name = "inputPassword" formControlName="password" />
+  </div>
+  <div class="form-group">
+    <label for="">Tên người dùng</label>
+    <input type="text" name = "inputName" formControlName="name" />
+  </div>
+  <div class="form-group">
+    <label for="">Email</label>
+    <input type="text" name = "inputEmail" formControlName="email"/>
+  </div>
+  <button type="submit">Tạo tài khoản</button>
+  <button type="button" (click)="onResetForm()" [style.margin-left.px]="10">Reset Form</button>
+  <button [routerLink]="['/login']" [style.margin-left.px]="10">Back to Login</button>
+</form>

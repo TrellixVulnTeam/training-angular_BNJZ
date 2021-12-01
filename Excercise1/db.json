@@ -1,0 +1,44 @@
+{
+  "account": [
+    {
+      "username": "admin",
+      "password": "admin",
+      "roles": "Admin",
+      "name": "ADMIN NE",
+      "email": "admin@gmail.com",
+      "id": 1
+    },
+    {
+      "username": "user",
+      "password": "user",
+      "roles": "Admin",
+      "name": "USER NE",
+      "email": "user@gmail.com",
+      "id": 2
+    },
+    {
+      "username": "admin10",
+      "password": "admin11",
+      "roles": "User",
+      "name": "cxzczx",
+      "email": "zczxcxzczcx32342",
+      "id": 3
+    },
+    {
+      "username": "admin5",
+      "password": "admin5",
+      "roles": "Admin",
+      "name": "Thien",
+      "email": "AOAOA",
+      "id": 4
+    },
+    {
+      "username": "test2",
+      "password": "abcccc",
+      "roles": "Admin",
+      "name": "vipipip",
+      "email": "prooooo",
+      "id": 5
+    }
+  ]
+}

@@ -14,8 +14,8 @@ export class ChildComponentComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log("OnInit")
   }
-
   @Input()
   set name(myName : string){
     this._name = myName

@@ -1,0 +1,14 @@
+<form [formGroup]="formLogin" (ngSubmit)="checkLogin()">
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name = "inputUserName" formControlName="username">
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name = "inputPassword" formControlName="password">
+  
+      <button type="submit">Login</button>
+    </div>
+  
+      <span class="psw" [style.margin-right.%]="45"><a [routerLink]="['/create']">Create an account?</a></span>
+  </form>
